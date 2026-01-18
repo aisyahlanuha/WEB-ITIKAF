@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ITIKAF RAMADHAN P3RI</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <div class="brand">
+          <div class="brand-mark">P3RI</div>
+          <div>
+            <p class="brand-title">ITIKAF RAMADHAN</p>
+            <span class="brand-subtitle">Masjid Salman ITB</span>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#beranda">Beranda</a>
+          <a href="#daftar">Daftar</a>
+          <a href="#status">Status</a>
+          <a href="#informasi">Informasi Pendaftar</a>
+          <a href="#tentang">Tentang</a>
+          <a href="#kontak">Kontak</a>
+        </div>
+        <button class="nav-toggle" aria-label="Buka navigasi">☰</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="beranda" class="hero">
+        <div class="hero-content">
+          <div>
+            <span class="pill">Aman • Nyaman • Mengesankan</span>
+            <h1>ITIKAF RAMADHAN P3RI</h1>
+            <p>
+              Platform pendaftaran jamaah i'tikaf untuk mendata kehadiran, status
+              malam, dan informasi pembayaran secara rapi dan mudah diakses.
+            </p>
+            <div class="hero-actions">
+              <a href="#daftar" class="primary-button">Daftar Sekarang</a>
+              <a href="#status" class="ghost-button">Lihat Status</a>
+            </div>
+            <div class="hero-stats">
+              <div>
+                <h3>900+</h3>
+                <p>Slot per malam</p>
+              </div>
+              <div>
+                <h3>10</h3>
+                <p>Malam terakhir Ramadhan</p>
+              </div>
+              <div>
+                <h3>100k+</h3>
+                <p>Skalabilitas akses</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card">
+            <h2>Ringkasan Layanan</h2>
+            <ul>
+              <li>Formulir individu & rombongan terstruktur.</li>
+              <li>Hitung otomatis total pembayaran & infaq.</li>
+              <li>Kode unik & QR otomatis setelah daftar.</li>
+              <li>Data tersimpan rapi di perangkat & dapat diunduh.</li>
+            </ul>
+            <div class="hero-card-footer">
+              <span>Siap digunakan untuk publik berskala besar.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="daftar" class="section">
+        <div class="section-heading">
+          <h2>Pendaftaran Jamaah</h2>
+          <p>
+            Pilih jenis pendaftaran yang sesuai. Semua kolom memiliki
+            keterangan agar data terinput jelas dan siap direkap.
+          </p>
+        </div>
+
+        <div class="tabs">
+          <button class="tab-button active" data-tab="individu">
+            Individu
+          </button>
+          <button class="tab-button" data-tab="rombongan">
+            Rombongan (Minimal 10 Orang)
+          </button>
+        </div>
+
+        <div class="tab-content active" id="tab-individu">
+          <form id="form-individu" class="form-card">
+            <div class="form-grid">
+              <div class="field">
+                <label for="individu-nama">Nama Lengkap</label>
+                <input
+                  id="individu-nama"
+                  type="text"
+                  placeholder="Contoh: Ahmad Fauzi"
+                  required
+                />
+                <p class="hint">Masukkan nama sesuai identitas resmi.</p>
+              </div>
+              <div class="field">
+                <label for="individu-alamat">Alamat Lengkap</label>
+                <textarea
+                  id="individu-alamat"
+                  placeholder="Alamat domisili lengkap"
+                  required
+                ></textarea>
+                <p class="hint">Tuliskan alamat lengkap agar mudah dihubungi.</p>
+              </div>
+              <div class="field">
+                <label for="individu-telepon">Nomor Telepon</label>
+                <input
+                  id="individu-telepon"
+                  type="tel"
+                  placeholder="08xxxxxxxxxx"
+                  required
+                />
+                <p class="hint">Gunakan nomor aktif WhatsApp.</p>
+              </div>
+              <div class="field">
+                <label for="individu-usia">Usia</label>
+                <input
+                  id="individu-usia"
+                  type="number"
+                  min="1"
+                  max="100"
+                  placeholder="Contoh: 21"
+                  required
+                />
+                <p class="hint">Usia akan digunakan untuk kategori layanan.</p>
+              </div>
+              <div class="field">
+                <label>Tanggal I'tikaf (pilih minimal 1)</label>
+                <div class="checkbox-grid" id="individu-tanggal"></div>
+                <p class="hint">Pilih malam yang akan diikuti.</p>
+              </div>
+              <div class="field">
+                <label>Informasi Pembayaran</label>
+                <div class="info-box">
+                  <p>Biaya: Rp25.000/malam.</p>
+                  <p>Minimum 1 malam.</p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="individu-infaq">Infaq (Opsional)</label>
+                <input
+                  id="individu-infaq"
+                  type="number"
+                  min="0"
+                  placeholder="Contoh: 50000"
+                />
+                <p class="hint">Infaq bersifat sukarela sesuai kemampuan.</p>
+              </div>
+              <div class="field">
+                <label>Total Pembayaran</label>
+                <div class="total-box" id="individu-total">Rp0</div>
+                <p class="hint">
+                  Total = jumlah malam × Rp25.000 + infaq.
+                </p>
+              </div>
+              <div class="field">
+                <label>Transfer ke Rekening</label>
+                <div class="info-box">
+                  <p>Bank A 1234567890 a.n. Masjid Salman ITB</p>
+                  <p>Bank B 1234567890 a.n. Masjid Salman ITB</p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="individu-bukti">Upload Bukti Transfer</label>
+                <input id="individu-bukti" type="file" required />
+                <p class="hint">Unggah bukti transfer pembayaran Anda.</p>
+              </div>
+            </div>
+            <button type="submit" class="primary-button">Kirim Pendaftaran</button>
+            <div class="result" id="individu-result"></div>
+          </form>
+        </div>
+
+        <div class="tab-content" id="tab-rombongan">
+          <form id="form-rombongan" class="form-card">
+            <div class="form-grid">
+              <div class="field">
+                <label for="rombongan-penanggung">Nama Lengkap Penanggung Jawab</label>
+                <input
+                  id="rombongan-penanggung"
+                  type="text"
+                  placeholder="Contoh: Fitria Ningsih"
+                  required
+                />
+                <p class="hint">Penanggung jawab utama rombongan.</p>
+              </div>
+              <div class="field">
+                <label for="rombongan-jumlah">Jumlah Orang Dalam Rombongan</label>
+                <input
+                  id="rombongan-jumlah"
+                  type="number"
+                  min="10"
+                  placeholder="Minimal 10"
+                  required
+                />
+                <p class="hint">Jumlah jamaah yang ikut i'tikaf.</p>
+              </div>
+              <div class="field">
+                <label for="rombongan-nama">Nama Lengkap Jamaah</label>
+                <textarea
+                  id="rombongan-nama"
+                  placeholder="Tulis semua nama, pisahkan dengan koma"
+                  required
+                ></textarea>
+                <p class="hint">Masukkan nama lengkap seluruh jamaah.</p>
+              </div>
+              <div class="field">
+                <label for="rombongan-alamat">Alamat Lengkap Penanggung Jawab</label>
+                <textarea
+                  id="rombongan-alamat"
+                  placeholder="Alamat penanggung jawab"
+                  required
+                ></textarea>
+                <p class="hint">Alamat lengkap untuk keperluan administrasi.</p>
+              </div>
+              <div class="field">
+                <label for="rombongan-daerah">Asal Daerah Rombongan</label>
+                <input
+                  id="rombongan-daerah"
+                  type="text"
+                  placeholder="Contoh: Bandung"
+                  required
+                />
+                <p class="hint">Asal kota/kabupaten rombongan.</p>
+              </div>
+              <div class="field">
+                <label for="rombongan-instansi">Asal Instansi Rombongan</label>
+                <input
+                  id="rombongan-instansi"
+                  type="text"
+                  placeholder="Tulis '-' jika tidak ada"
+                  required
+                />
+                <p class="hint">Nama instansi komunitas/organisasi.</p>
+              </div>
+              <div class="field">
+                <label for="rombongan-telepon">Nomor Telepon Penanggung Jawab</label>
+                <input
+                  id="rombongan-telepon"
+                  type="tel"
+                  placeholder="08xxxxxxxxxx"
+                  required
+                />
+                <p class="hint">Nomor aktif WhatsApp penanggung jawab.</p>
+              </div>
+              <div class="field">
+                <label>Rentang Usia Rombongan</label>
+                <div class="age-grid" id="rombongan-usia"></div>
+                <p class="hint">Isi jumlah jamaah di setiap kelompok usia.</p>
+              </div>
+              <div class="field">
+                <label>Tanggal I'tikaf (pilih minimal 1)</label>
+                <div class="checkbox-grid" id="rombongan-tanggal"></div>
+                <p class="hint">Pilih malam yang akan diikuti rombongan.</p>
+              </div>
+              <div class="field">
+                <label>Informasi Pembayaran</label>
+                <div class="info-box">
+                  <p>Biaya: Rp25.000/malam/orang.</p>
+                  <p>Minimal 1 malam.</p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="rombongan-infaq">Infaq (Opsional)</label>
+                <input
+                  id="rombongan-infaq"
+                  type="number"
+                  min="0"
+                  placeholder="Contoh: 100000"
+                />
+                <p class="hint">Infaq bersifat sukarela sesuai kemampuan.</p>
+              </div>
+              <div class="field">
+                <label>Total Pembayaran</label>
+                <div class="total-box" id="rombongan-total">Rp0</div>
+                <p class="hint">
+                  Total = jumlah malam × jumlah jamaah × Rp25.000 + infaq.
+                </p>
+              </div>
+              <div class="field">
+                <label>Transfer ke Rekening</label>
+                <div class="info-box">
+                  <p>Bank A 1234567890 a.n. Masjid Salman ITB</p>
+                  <p>Bank B 1234567890 a.n. Masjid Salman ITB</p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="rombongan-bukti">Upload Bukti Transfer</label>
+                <input id="rombongan-bukti" type="file" required />
+                <p class="hint">Unggah bukti transfer pembayaran Anda.</p>
+              </div>
+            </div>
+            <button type="submit" class="primary-button">Kirim Pendaftaran</button>
+            <div class="result" id="rombongan-result"></div>
+          </form>
+        </div>
+      </section>
+
+      <section id="status" class="section light">
+        <div class="section-heading">
+          <h2>Status Ketersediaan</h2>
+          <p>
+            Pantau kapasitas setiap malam. Bar berwarna merah menandakan
+            kapasitas melebihi 900 jamaah.
+          </p>
+        </div>
+        <div class="status-grid">
+          <div class="card">
+            <h3>Rekap Pendaftar per Malam</h3>
+            <div id="chart-bars" class="bar-chart"></div>
+          </div>
+          <div class="card">
+            <h3>Keterangan</h3>
+            <ul class="list">
+              <li>Hijau: kapasitas aman.</li>
+              <li>Merah: melebihi 900 jamaah.</li>
+              <li>Data diperbarui otomatis setelah pendaftaran.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="informasi" class="section">
+        <div class="section-heading">
+          <h2>Informasi Pendaftar</h2>
+          <p>
+            Cari nama pendaftar untuk melihat detail, status malam, dan QR
+            kode. Data tersimpan rapi pada perangkat ini dan bisa diunduh.
+          </p>
+        </div>
+        <div class="info-grid">
+          <div class="card">
+            <h3>Kalender Februari 2026</h3>
+            <div class="calendar" id="calendar-feb"></div>
+          </div>
+          <div class="card">
+            <h3>Kalender Maret 2026</h3>
+            <div class="calendar" id="calendar-mar"></div>
+          </div>
+          <div class="card wide">
+            <h3>Cari Nama Pendaftar</h3>
+            <div class="search-row">
+              <input
+                id="search-input"
+                type="text"
+                placeholder="Cari nama pendaftar"
+              />
+              <button id="download-data" class="ghost-button">Unduh Data</button>
+            </div>
+            <div id="search-results" class="results"></div>
+            <div class="nights">
+              <h4>Jumlah Malam Terdaftar</h4>
+              <div id="night-tags" class="tag-list"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tentang" class="section light">
+        <div class="section-heading">
+          <h2>Tentang Program I'tikaf</h2>
+        </div>
+        <div class="about-grid">
+          <div class="card">
+            <h3>I'tikaf</h3>
+            <p>
+              I'tikaf adalah ibadah sunnah yang dilakukan dengan berdiam diri di
+              masjid untuk beribadah dan mendekatkan diri kepada Allah SWT,
+              terutama di 10 hari terakhir Ramadhan. Masjid Salman ITB
+              menyelenggarakan program i'tikaf dengan fasilitas lengkap dan
+              nyaman bagi mahasiswa dan jamaah umum.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Rundown Kegiatan</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span>15.45–17.00</span>
+                <p>Registrasi Sesi 1</p>
+              </div>
+              <div class="timeline-item">
+                <span>18.00–18.30</span>
+                <p>Shalat Maghrib</p>
+              </div>
+              <div class="timeline-item">
+                <span>18.30–19.00</span>
+                <p>Pengambilan Konsumsi Berbuka</p>
+              </div>
+              <div class="timeline-item">
+                <span>19.00–20.30</span>
+                <p>Shalat Isya dan Tarawih</p>
+              </div>
+              <div class="timeline-item">
+                <span>20.00–21.30</span>
+                <p>Registrasi Sesi 2</p>
+              </div>
+              <div class="timeline-item">
+                <span>21.00–22.00</span>
+                <p>Mengaji Bersama (Opsional)</p>
+              </div>
+              <div class="timeline-item">
+                <span>21.00–22.30</span>
+                <p>Snack Malam</p>
+              </div>
+              <div class="timeline-item">
+                <span>21.30–22.00</span>
+                <p>Peminjaman Alat Tidur</p>
+              </div>
+              <div class="timeline-item">
+                <span>22.00–02.00</span>
+                <p>Istirahat dan Kegiatan Mandiri</p>
+              </div>
+              <div class="timeline-item">
+                <span>02.00–02.30</span>
+                <p>Pengondisian Qiyamullail</p>
+              </div>
+              <div class="timeline-item">
+                <span>02.30–03.15</span>
+                <p>Qiyamullail</p>
+              </div>
+              <div class="timeline-item">
+                <span>03.30–04.15</span>
+                <p>Pengambilan Makan Sahur</p>
+              </div>
+              <div class="timeline-item">
+                <span>04.30–05.30</span>
+                <p>Shalat Subuh dan Kuliah Subuh/Alma’tsurot Jama’ah</p>
+              </div>
+              <div class="timeline-item">
+                <span>05.30–06.00</span>
+                <p>Pengembalian Alat Tidur</p>
+              </div>
+              <div class="timeline-item">
+                <span>07.00–08.00</span>
+                <p>Laundry (Opsional)</p>
+              </div>
+              <div class="timeline-item">
+                <span>12.30–17.00</span>
+                <p>Teras Tahsin</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Fasilitas</h3>
+            <div class="facility-grid">
+              <div class="facility">
+                <span>🛏️</span>
+                <h4>Tempat Tidur</h4>
+                <p>Kasur dan bantal yang nyaman untuk istirahat.</p>
+              </div>
+              <div class="facility">
+                <span>🍽️</span>
+                <h4>Konsumsi</h4>
+                <p>Sahur dan berbuka dengan menu bergizi.</p>
+              </div>
+              <div class="facility">
+                <span>🚿</span>
+                <h4>Kamar Mandi</h4>
+                <p>Kamar mandi bersih dan terawat.</p>
+              </div>
+              <div class="facility">
+                <span>❄️</span>
+                <h4>AC & Kipas</h4>
+                <p>Ruangan ber-AC dengan sirkulasi udara baik.</p>
+              </div>
+              <div class="facility">
+                <span>🔒</span>
+                <h4>Loker</h4>
+                <p>Tempat penyimpanan barang yang aman.</p>
+              </div>
+              <div class="facility">
+                <span>📶</span>
+                <h4>WiFi</h4>
+                <p>Koneksi internet untuk kebutuhan komunikasi.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>QnA</h3>
+            <div class="accordion">
+              <details>
+                <summary>Siapa yang boleh mengikuti I'tikaf?</summary>
+                <p>
+                  I'tikaf terbuka untuk mahasiswa ITB dan umum yang ingin
+                  meningkatkan ibadah di bulan Ramadhan. Peserta diharapkan dapat
+                  mengikuti kegiatan selama minimal 1 hari penuh.
+                </p>
+              </details>
+              <details>
+                <summary>Apakah ada biaya pendaftaran?</summary>
+                <p>
+                  Tidak ada biaya pendaftaran. Namun, kami menerima infaq
+                  sukarela untuk membantu operasional kegiatan I'tikaf.
+                </p>
+              </details>
+              <details>
+                <summary>Apa saja yang perlu dibawa?</summary>
+                <p>
+                  Peserta disarankan membawa perlengkapan pribadi seperti
+                  mukena/sarung, Al-Quran, alat mandi, pakaian ganti, dan
+                  perlengkapan tidur tambahan jika diperlukan.
+                </p>
+              </details>
+              <details>
+                <summary>Apakah boleh keluar dari masjid selama I'tikaf?</summary>
+                <p>
+                  Sesuai ketentuan I'tikaf, peserta dianjurkan untuk tidak keluar
+                  dari area masjid kecuali ada keperluan darurat atau hajat yang
+                  sangat diperlukan.
+                </p>
+              </details>
+              <details>
+                <summary>Bagaimana cara mendaftar?</summary>
+                <p>
+                  Pendaftaran dapat dilakukan melalui website ini dengan
+                  mengklik tombol "Daftar Sekarang" dan mengisi formulir yang
+                  tersedia.
+                </p>
+              </details>
+              <details>
+                <summary>Apakah tersedia tempat untuk ikhwan dan akhwat?</summary>
+                <p>
+                  Ya, kami menyediakan area terpisah untuk ikhwan dan akhwat
+                  dengan fasilitas yang memadai untuk masing-masing.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="kontak" class="section">
+        <div class="section-heading">
+          <h2>Kontak</h2>
+          <p>Hubungi tim kami untuk informasi lebih lanjut.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="card">
+            <h3>Hubungi Kami</h3>
+            <div class="contact-item">
+              <span>📞</span>
+              <div>
+                <p>Telepon</p>
+                <strong>+62 812-3456-7890 (Ikhwan)</strong>
+                <strong>+62 812-3456-7890 (Akhwat)</strong>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span>✉️</span>
+              <div>
+                <p>Email</p>
+                <strong>itikaf@salmanitb.com</strong>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span>📍</span>
+              <div>
+                <p>Alamat</p>
+                <strong>Jl. Ganesha No. 7, Bandung, Jawa Barat 40132</strong>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span>💬</span>
+              <div>
+                <p>WhatsApp</p>
+                <strong>Chat via WhatsApp untuk respon cepat</strong>
+              </div>
+            </div>
+          </div>
+          <div class="card highlight">
+            <h3>Catatan Layanan</h3>
+            <p>
+              Sistem pendaftaran ini dirancang ringan, cepat, dan dapat diakses
+              oleh ratusan ribu orang secara bersamaan dengan struktur data yang
+              rapi dan transparan.
+            </p>
+            <p class="closing">© 2024 Masjid Salman ITB. All rights reserved.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Aman, Nyaman, Mengesankan</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
